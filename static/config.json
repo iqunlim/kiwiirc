@@ -1,28 +1,37 @@
 {
-    "windowTitle": "Kiwi IRC - The web IRC client",
+    "windowTitle": "SRL Web IRC",
     "startupScreen": "welcome",
-    "kiwiServer": "https://localdev.clients.kiwiirc.com/webirc/kiwiirc/",
-    "restricted": false,
-    "theme": "Default",
+    "restricted": true,
+    "theme": "speedrunslive",
     "themes": [
-        { "name": "Default", "url": "static/themes/default" },
-        { "name": "Dark", "url": "static/themes/dark" },
-        { "name": "Coffee", "url": "static/themes/coffee" },
-        { "name": "GrayFox", "url": "static/themes/grayfox" },
-        { "name": "Nightswatch", "url": "static/themes/nightswatch" },
-        { "name": "Osprey", "url": "static/themes/osprey" },
-        { "name": "Radioactive", "url": "static/themes/radioactive" },
-        { "name": "Sky", "url": "static/themes/sky" },
-        { "name": "Elite", "url": "static/themes/elite" }
+        {
+            "name": "speedrunslive",
+            "url": "static/themes/speedrunslive"
+        },
+        {
+            "name": "default",
+            "url": "static/themes/default"
+        },
+        {
+            "name": "dark",
+            "url": "static/themes/dark"
+        }
     ],
-    "startupOptions" : {
-        "channel": "#kiwiirc-default",
-        "nick": "kiwi-n?"
+    "buffers": {
+        "nicklist_avatars": false,
+        "messageLayout": "compact",
+        "show_link_previews": false,
+        "inline_link_auto_previews": false
     },
-    "embedly": {
-        "key": ""
-    },
-    "plugins": [
-        { "name": "customise", "url": "static/plugins/customise.html" }
-    ]
+    "startupOptions": {
+        "server": "irc.speedrunslive.com",
+        "port": 6667,
+        "tls": false,
+        "channel": "#speedrunslive",
+        "nick": "srl-????",
+        "greetingText": "Speedrunslive WebIRC",
+        "infoBackground": "",
+        "infoContent": "TODO: Add Directions and advice",
+        "buttonText": "Enter IRC"
+    }
 }

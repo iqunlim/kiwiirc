@@ -1,0 +1,320 @@
+@import '../common/base.css';
+
+/* 
+    btn-hover-blue
+    color: #fff;
+    background-image: url(http://cdn.speedrunslive.com/images/grunge_button.png), linear-gradient(to bottom, #3c70df, #235cd4);
+    border-color: #4e7de2 #102a63 #102a63 #4e7de2;)
+*/
+:root {
+    /* SRL Colors */
+    --srl-bg-dark: #111;
+    --srl-bg-light: #202020;
+    --srl-text-orange: #e09456;
+    --srl-text-yellow: #f7e279;
+    --srl-text-default: #bec7d2;
+    --srl-btn-hover-gold: #7c713d;
+    --srl-bg-input-1: #5f6469; /* These are in a linear-gradient(to bottom, bg-input-1, bg-input-2 */
+    --srl-bg-input-2: #4e5256;
+    --srl-button-img: url('../../grunge_button.png');
+
+    /* Primary Variables */
+    --brand-primary: var(--srl-text-default);
+    --brand-primary-hover: #fff;
+    --brand-midtone: var(--srl-bg-light);
+    --brand-darktone: var(--srl-bg-dark);
+    --brand-default-bg: var(--srl-bg-dark);
+    --brand-default-fg: var(--srl-text-default);
+
+    /* Warning colors */
+    --brand-notice: #f6c358;
+    --brand-warning: var(--srl-bg-dark);
+    --brand-error: #bf5155;
+
+    /* Input elements */
+    --brand-input-border: #e2e2e2;
+    --brand-input-fg: #fff;
+    --brand-input-bg: transparent;
+
+    /* Connection Indicator top */
+    --comp-workspace-before-bg: var(--brand-primary);
+    --comp-bg-kiwi-workspace--disconnected-after-bg: var(--brand-error);
+
+    /* Container Header */
+    --comp-header-bg: var(--srl-bg-light);
+    --comp-header-name-fg: var(--srl-text-default);
+    --comp-header-option-active-fg: var(--brand-default-bg);
+    --comp-header-option-active-bg: var(--brand-primary);
+
+    /* StateBrowser */
+    --comp-statebrowser-fg: var(--srl-text-default);
+    --comp-statebrowser-bg: var(--srl-bg-light);
+    --comp-statebrowser-bg-networkname: #454545;
+    --comp-statebrowser-channel-active-bg: #ffffff0d;
+    --comp-statebrowser-channel-active-fg: #fff;
+    --comp-usermenu-open-bg: #0e0e0e;
+    --comp-statebrowser-network-border: #656565;
+
+    /* Sidebars ( Right Side ) */
+    --comp-sidebar-bg: var(--srl-bg-light);
+    --comp-sidebar-fg: var(--srl-text-default);
+    --comp-aboutbuffer-bg: var(--srl-bg-dark);
+    --comp-aboutbuffer-header-bg: var(--srl-text-default);
+
+    /* Misc */
+    --brand-link-normal: var(--srl-text-default);
+    --brand-link--hover: #fff;
+    --brand-shadow: rgba(0, 0, 0, 0.1);
+    --comp-border: #b2b2b2;
+}
+
+/* Globals */
+body {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+h2,
+h3,
+h4 {
+    background-color: var(--srl-bg-dark);
+    color: var(--srl-text-orange);
+}
+
+select option {
+    background-color: var(--srl-bg-dark);
+}
+
+/* IRC Text Colours */
+.irc-fg-colour-white {
+    color: #fff;
+}
+.irc-fg-colour-black {
+    color: #000;
+}
+.irc-fg-colour-blue {
+    color: #00f;
+}
+.irc-fg-colour-green {
+    color: #0f0;
+}
+.irc-fg-colour-light-red {
+    color: #ff5959;
+}
+.irc-fg-colour-brown {
+    color: #743a00;
+}
+.irc-fg-colour-purple {
+    color: #a500ff;
+}
+.irc-fg-colour-orange {
+    color: #ff8c00;
+}
+.irc-fg-colour-yellow {
+    color: #d6d63d;
+}
+.irc-fg-colour-light-green {
+    color: #6fff6f;
+}
+.irc-fg-colour-cyan {
+    color: #0cc;
+}
+.irc-fg-colour-light-cyan {
+    color: #6dffff;
+}
+.irc-fg-colour-light-blue {
+    color: #59b4ff;
+}
+.irc-fg-colour-pink {
+    color: #f0f;
+}
+.irc-fg-colour-grey {
+    color: #a6a6a6;
+}
+.irc-fg-colour-light-grey {
+    color: #e2e2e2;
+}
+
+.irc-bg-colour-white {
+    background-color: #fff;
+}
+.irc-bg-colour-black {
+    background-color: #000;
+}
+.irc-bg-colour-blue {
+    background-color: #00f;
+}
+.irc-bg-colour-green {
+    background-color: #0f0;
+}
+.irc-bg-colour-light-red {
+    background-color: red;
+}
+.irc-bg-colour-brown {
+    background-color: #743a00;
+}
+.irc-bg-colour-purple {
+    background-color: #a500ff;
+}
+.irc-bg-colour-orange {
+    background-color: #ff8c00;
+}
+.irc-bg-colour-yellow {
+    background-color: #d6d63d;
+}
+.irc-bg-colour-light-green {
+    background-color: #6fff6f;
+}
+.irc-bg-colour-cyan {
+    background-color: #0cc;
+}
+.irc-bg-colour-light-cyan {
+    background-color: #6dffff;
+}
+.irc-bg-colour-light-blue {
+    background-color: #59b4ff;
+}
+.irc-bg-colour-pink {
+    background-color: #f0f;
+}
+.irc-bg-colour-grey {
+    background-color: #a6a6a6;
+}
+.irc-bg-colour-light-grey {
+    background-color: #e2e2e2;
+}
+
+/* Removing that ugly silver line at the top */
+.kiwi-workspace::before {
+    background: var(--srl-bg-dark);
+}
+
+.kiwi-statebrowser {
+    background-color: var(--srl-bg-light);
+    box-shadow: 0px 0 2px #101010;
+}
+
+.kiwi-startup-common-section-connection {
+    background-color: #262626;
+}
+
+@media (max-width: 850px) {
+    .kiwi-startup-common--no-bg .kiwi-startup-common-section-info {
+        border-top: 1px solid var(--srl-btn-hover-gold);
+        border-top-style: dotted;
+    }
+}
+
+.kiwi-startup-common--no-bg .kiwi-startup-common-section-info {
+    border-left: 1px solid var(--srl-btn-hover-gold);
+    border-left-style: dotted;
+    box-shadow: 0 0 2px var(--srl-btn-hover-gold);
+    background-color: #111;
+}
+
+.u-button {
+    border: none;
+    color: #fff;
+    background-image: var(--srl-button-img), linear-gradient(to bottom, #424242, #333);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.u-button:hover {
+    background-image: var(--srl-button-img),
+        linear-gradient(to bottom, var(--srl-btn-hover-gold), var(--srl-btn-hover-gold));
+}
+
+.kiwi-welcome-simple-form .u-submit {
+    /* Main Start button */
+    color: #fff;
+}
+
+.u-input-text {
+    border: 1px solid var(--srl-bg-dark);
+    border-radius: 5px;
+}
+
+.u-form {
+    border-radius: 5px;
+    background-color: var(--srl-bg-dark);
+}
+
+.u-form .u-input {
+    border: 1px solid var(--srl-bg-input-1);
+    border-radius: 5px;
+}
+
+.u-form .u-input:focus {
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.u-input-text-inputs {
+    font-weight: 700;
+    border-radius: 5px;
+    background-image: var(--srl-button-img), linear-gradient(to bottom, var(--srl-bg-input-1), var(--srl-bg-input-2));
+}
+
+.u-form label {
+    color: var(--srl-text-yellow);
+}
+
+/* We do not care about passwords, if we care later remove this */
+label.kiwi-welcome-simple-have-password {
+    display: none;
+}
+
+.kiwi-messagelist-message-action .kiwi-messagelist-body {
+    color: var(--srl-text-default);
+}
+.kiwi-messagelist-message-notice {
+    background-color: var(--srl-bg-light);
+}
+
+.kiwi-messagelist-message-highlight {
+    background: var(--srl-bg-dark);
+    /*border-bottom: 1px solid var(--srl-text-default);*/
+}
+
+.kiwi-sidebar {
+    background-color: var(--srl-bg-light);
+}
+
+/* Remove weird border */
+.kiwi-avatar span {
+    border-style: none;
+}
+
+/* Too long name stop it from overflowing in to text box */
+.kiwi-messagelist-nick:hover {
+    width: unset;
+}
+
+/* About section of the web window */
+.kiwi-aboutbuffer h4 {
+    background-color: var(--srl-text-default);
+}
+
+/* emoticon menu? */
+.kiwi-controlinput-active-tool {
+    background: var(--srl-bg-light);
+}
+
+/* AppSettings menu */
+.kiwi-appsettings-block {
+    border: 1px solid var(--srl-text-orange);
+}
+
+.kiwi-appsettings-block h3 {
+    background: var(--srl-bg-dark);
+    color: var(--srl-text-orange);
+}
+
+.kiwi-appsettings-title {
+    background: var(--srl-bg-light);
+    color: var(--srl-text-orange);
+}
+
+.kiwi-aboutbuffer h4 {
+    background-color: var(--srl-bg-light);
+    color: var(--srl-text-yellow);
+}

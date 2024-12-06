@@ -16,7 +16,7 @@
     --srl-btn-hover-gold: #7c713d;
     --srl-bg-input-1: #5f6469; /* These are in a linear-gradient(to bottom, bg-input-1, bg-input-2 */
     --srl-bg-input-2: #4e5256;
-    --srl-button-img: url('../../grunge_button.png');
+    --srl-button-img: url('http://cdn.speedrunslive.com/images/grunge_button.png');
 
     /* Primary Variables */
     --brand-primary: var(--srl-text-default);
@@ -28,7 +28,7 @@
 
     /* Warning colors */
     --brand-notice: #f6c358;
-    --brand-warning: var(--srl-bg-dark);
+    --brand-warning: #f12727;
     --brand-error: #bf5155;
 
     /* Input elements */
@@ -317,4 +317,9 @@ label.kiwi-welcome-simple-have-password {
 .kiwi-aboutbuffer h4 {
     background-color: var(--srl-bg-light);
     color: var(--srl-text-yellow);
+}
+
+/* Dot above circle */
+.kiwi-avatar-status--away {
+    background-color: var(--brand-warning);
 }
